@@ -3,6 +3,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type: TRACE
+    org.exampledriven: DEBUG
 
 post-service:
   url: https://jsonplaceholder.typicode.com/posts?userId={userId}
