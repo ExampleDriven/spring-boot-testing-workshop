@@ -6,3 +6,8 @@ logging:
 
 post-service:
   url: https://jsonplaceholder.typicode.com/posts?userId={userId}
+
+spring:
+  cache:
+    jcache:
+      config: classpath:ehcache3.xml

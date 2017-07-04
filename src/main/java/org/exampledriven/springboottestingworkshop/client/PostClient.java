@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,7 @@ public class PostClient {
     @Value("${post-service.url}")
     private String url;
 
+    @Cacheable("post")
     public List<Post> readPosts(int userId) {
 
         logger.debug("Calling " + url + "with " + userId);
